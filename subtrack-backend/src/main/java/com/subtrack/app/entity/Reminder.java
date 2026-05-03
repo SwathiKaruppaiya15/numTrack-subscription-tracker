@@ -9,8 +9,13 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "reminders",
-       uniqueConstraints = @UniqueConstraint(columnNames = {"subscription_id", "reminder_type", "scheduled_for"}))
+@Table(
+    name = "reminders",
+    uniqueConstraints = @UniqueConstraint(
+        name = "uq_reminder_sub_type_date",
+        columnNames = {"subscription_id", "reminder_type", "scheduled_for"}
+    )
+)
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Reminder {
 

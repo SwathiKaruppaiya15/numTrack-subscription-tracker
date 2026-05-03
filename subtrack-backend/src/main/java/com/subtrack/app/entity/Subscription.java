@@ -13,8 +13,10 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "subscriptions",
-       uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "name"}))
+@Table(
+    name = "subscriptions",
+    uniqueConstraints = @UniqueConstraint(name = "uq_user_subscription_name", columnNames = {"user_id", "name"})
+)
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Subscription {
 
