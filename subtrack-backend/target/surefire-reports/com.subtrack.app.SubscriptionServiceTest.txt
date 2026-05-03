@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.subtrack.app.SubscriptionServiceTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.849 s -- in com.subtrack.app.SubscriptionServiceTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.030 s -- in com.subtrack.app.SubscriptionServiceTest
