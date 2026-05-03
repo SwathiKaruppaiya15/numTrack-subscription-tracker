@@ -30,13 +30,11 @@ api.interceptors.response.use(
   }
 );
 
-// ── Auth ─────────────────────────────────────────────────────
 export const authAPI = {
   register: (data) => api.post("/api/auth/register", data),
   login:    (data) => api.post("/api/auth/login", data),
 };
 
-// ── Subscriptions ────────────────────────────────────────────
 export const subscriptionAPI = {
   getAll:  ()         => api.get("/api/subscriptions"),
   getById: (id)       => api.get(`/api/subscriptions/${id}`),
@@ -46,26 +44,22 @@ export const subscriptionAPI = {
   delete:  (id)       => api.delete(`/api/subscriptions/${id}`),
 };
 
-// ── Payments ─────────────────────────────────────────────────
 export const paymentAPI = {
-  getAll:           ()     => api.get("/api/payments"),
-  getBySubscription:(id)   => api.get(`/api/payments/subscription/${id}`),
-  record:           (data) => api.post("/api/payments", data),
+  getAll:            ()     => api.get("/api/payments"),
+  getBySubscription: (id)   => api.get(`/api/payments/subscription/${id}`),
+  record:            (data) => api.post("/api/payments", data),
 };
 
-// ── Usage ────────────────────────────────────────────────────
 export const usageAPI = {
-  log:              (data) => api.post("/api/usage", data),
-  getBySubscription:(id)   => api.get(`/api/usage/subscription/${id}`),
+  log:               (data) => api.post("/api/usage", data),
+  getBySubscription: (id)   => api.get(`/api/usage/subscription/${id}`),
 };
 
-// ── Analytics ────────────────────────────────────────────────
 export const analyticsAPI = {
   get:         () => api.get("/api/analytics"),
   getInsights: () => api.get("/api/analytics/insights"),
 };
 
-// ── Reminders ────────────────────────────────────────────────
 export const reminderAPI = {
   getAll:      ()   => api.get("/api/reminders"),
   triggerTest: (id) => api.post(`/api/reminders/test/${id}`),

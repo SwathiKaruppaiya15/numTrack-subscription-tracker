@@ -1,0 +1,33 @@
+# Production profile — all values come from environment variables
+# Never hardcode secrets here
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update        # use 'validate' once schema is stable
+    show-sql: false
+
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: ${JWT_EXPIRATION:86400000}
+  frontend-url: ${FRONTEND_URL}
+  scheduler:
+    enabled: true
+    timezone: Asia/Kolkata
+
+logging:
+  level:
+    com.subtrack: INFO
+    org.springframework.security: WARN

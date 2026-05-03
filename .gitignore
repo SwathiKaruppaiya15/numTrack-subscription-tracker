@@ -1,4 +1,29 @@
+# ── Maven ─────────────────────────────────────────────────────
 target/
 *.jar
+*.war
+*.class
+
+# ── Node / Frontend ───────────────────────────────────────────
 node_modules/
+subtrack-frontend/dist/
+
+# ── Environment secrets (NEVER commit these) ─────────────────
 .env
+.env.local
+.env.production
+
+# ── IDE ───────────────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+*.suo
+*.user
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
