@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/subtrack}
-    username: postgres
-    password: 1234
+    url: jdbc:postgresql://ep-fragrant-term-ammlvt3o-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_aHR2PBEov4Gg
     driver-class-name: org.postgresql.Driver
 
   jpa:
